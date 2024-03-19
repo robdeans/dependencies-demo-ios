@@ -1,0 +1,47 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "List of %lld marvel super heroes." : {
+
+    },
+    "Login" : {
+
+    },
+    "No description available" : {
+
+    },
+    "Onboarding" : {
+
+    },
+    "Plural.TestSample" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%d Test"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%d Tests"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Sample view to demonstrate accessibility features. Unit tests also included for reference." : {
+
+    },
+    "This is a detailed view" : {
+
+    }
+  },
+  "version" : "1.0"
+}

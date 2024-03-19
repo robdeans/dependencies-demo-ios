@@ -1,0 +1,31 @@
+{
+  "configurations" : [
+    {
+      "id" : "5116B599-AE1B-4AEF-ADAE-12F72FB44B9F",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:ArkanaKeys\/ArkanaKeys",
+        "identifier" : "ArkanaKeysTests",
+        "name" : "ArkanaKeysTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:DependenciesDemo.xcodeproj",
+        "identifier" : "F4CD70342000044F0013EE7B",
+        "name" : "DependenciesDemoTests"
+      }
+    }
+  ],
+  "version" : 1
+}

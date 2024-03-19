@@ -1,0 +1,8 @@
+sources:
+  include:
+    - ../../DependenciesDemo/Code
+  exclude:
+    - ../../DependenciesDemo/Code/Generated
+templates:
+  - ../../Templates/Sourcery
+output: ../../DependenciesDemo/Code/Generated/Sourcery

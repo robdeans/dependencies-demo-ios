@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:DependenciesDemo.xcodeproj">
+   </FileRef>
+   <Group
+      location = "container:"
+      name = "Packages">
+      <FileRef
+         location = "group:Packages/DependenciesDemoAPIKit">
+      </FileRef>
+      <FileRef
+         location = "group:Packages/DependenciesDemoHelpers">
+      </FileRef>
+      <FileRef
+         location = "group:ArkanaKeys/ArkanaKeys">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:Templates"
+      name = "Templates">
+      <Group
+         location = "group:Sourcery"
+         name = "Sourcery">
+         <FileRef
+            location = "group:AutoInit.stencil">
+         </FileRef>
+         <FileRef
+            location = "group:PluggableApplicationDelegate.swifttemplate">
+         </FileRef>
+         <FileRef
+            location = "group:AutoHashable.stencil">
+         </FileRef>
+         <FileRef
+            location = "group:AutoCodable.swifttemplate">
+         </FileRef>
+         <FileRef
+            location = "group:AutoEquatable.stencil">
+         </FileRef>
+         <FileRef
+            location = "group:AutoLenses.stencil">
+         </FileRef>
+         <FileRef
+            location = "group:AutoDebugDescription.swifttemplate">
+         </FileRef>
+      </Group>
+   </Group>
+   <Group
+      location = "group:Tools"
+      name = "Tools">
+      <FileRef
+         location = "group:fueled_format"
+         assignedFileDataType = "public.ruby-script">
+      </FileRef>
+      <FileRef
+         location = "group:pregenerate_code"
+         assignedFileDataType = "public.shell-script">
+      </FileRef>
+      <FileRef
+         location = "group:tools_helpers.rb">
+      </FileRef>
+      <FileRef
+         location = "group:run_sourcery.sh">
+      </FileRef>
+      <Group
+         location = "group:Configs"
+         name = "Configs">
+         <FileRef
+            location = "group:swiftformat.args">
+         </FileRef>
+         <FileRef
+            location = "group:swiftlint.yml">
+         </FileRef>
+      </Group>
+   </Group>
+   <FileRef
+      location = "group:DependenciesDemo.xctestplan">
+   </FileRef>
+</Workspace>
