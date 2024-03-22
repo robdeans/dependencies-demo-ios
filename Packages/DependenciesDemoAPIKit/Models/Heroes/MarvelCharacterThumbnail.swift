@@ -21,3 +21,7 @@ public struct MarvelCharacterThumbnail: Codable, Hashable {
 		self.ext = ext
 	}
 }
+
+extension MarvelCharacterThumbnail {
+	public static let mock = MarvelCharacterThumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/6/20/52602f21f29ec", ext: "jpg")
+}

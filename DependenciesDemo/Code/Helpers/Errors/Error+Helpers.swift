@@ -6,8 +6,8 @@
 //  Copyright © 2024 Fueled. All rights reserved.
 //
 
-import Foundation
 import DependenciesDemoHelpers
+import Foundation
 
 extension Error {
 	var verboseDescription: String {

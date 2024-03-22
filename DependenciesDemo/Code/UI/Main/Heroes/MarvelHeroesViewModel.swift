@@ -15,23 +15,49 @@ import DependenciesDemoModels
 final class MarvelHeroesViewModel: ObservableObject {
 	private(set) var marvelHeroesNavigation: MarvelHeroesNavigation?
 	@Published private(set) var superHeroes: [MarvelCharacter] = []
+	@Published private(set) var classHeroes: [MarvelCharacter] = []
+	@Published private(set) var structHeroes: [MarvelCharacter] = []
 	@Published private(set) var isLoading = false
+	var error: Error?
+
+	@Dependency(\.marvelHeroesService) private var marvelHeroesService
+	@Dependency(\.heroRepositoryClass) private var heroRepositoryClass
+	@Dependency(\.heroRepositoryStruct) private var heroRepositoryStruct
 
 	func setup(navigation: MarvelHeroesNavigation) {
 		marvelHeroesNavigation = navigation
 	}
 
-	func loadData() async {
-		LogInfo("Loading data for fetchMarvelHeroes")
+	///
+	///	Comment out encapsulated `@Dependency` from within each of the methods
+	///	allowing local variables to be applied.
+	///
+	///	This results in successful overrides and passing unit tests
+	func loadServiceData() async {
 		do {
-			isLoading = true
 			@Dependency(\.marvelHeroesService) var marvelHeroesService
 			superHeroes = try await marvelHeroesService.fetchMarvelHeroes()
 		} catch {
-			// TODO: Handle errors
+			self.error = error
 		}
+	}
 
-		isLoading = false
+	func loadClassData() async {
+		do {
+//			@Dependency(\.heroRepositoryClass) var heroRepositoryClass
+			classHeroes = try await heroRepositoryClass.getAllMarvelCharacters(true)
+		} catch {
+			self.error = error
+		}
+	}
+
+	func loadStructData() async {
+		do {
+//			@Dependency(\.heroRepositoryStruct) var heroRepositoryStruct
+			structHeroes = try await heroRepositoryStruct.getAllMarvelCharacters(true)
+		} catch {
+			self.error = error
+		}
 	}
 
 	func navigate(to character: MarvelCharacter) {

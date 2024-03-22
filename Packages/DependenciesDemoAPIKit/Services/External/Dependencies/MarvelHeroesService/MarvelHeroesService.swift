@@ -14,7 +14,7 @@ public struct MarvelHeroesService {
 }
 
 extension MarvelHeroesService: DependencyKey {
-	public static let testValue = Self.previewValue
+	public static var testValue: MarvelHeroesService { Self.previewValue }
 }
 
 extension DependencyValues {

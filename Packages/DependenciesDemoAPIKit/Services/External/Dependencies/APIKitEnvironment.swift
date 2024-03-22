@@ -7,9 +7,9 @@
 //
 
 import Dependencies
-import Foundation
 import DependenciesDemoHelpers
 import DependenciesDemoModels
+import Foundation
 
 public struct APIKitEnvironment {
 	public var environment: () -> APIEnvironment

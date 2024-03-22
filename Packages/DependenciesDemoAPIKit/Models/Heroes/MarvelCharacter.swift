@@ -9,8 +9,10 @@
 import Foundation
 
 public struct MarvelCharacter: Codable, Hashable {
+	public typealias ID = Int
+
 	public let name: String
-	public let id: Int
+	public let id: ID
 	public let description: String
 	public let thumbnail: MarvelCharacterThumbnail
 
@@ -21,7 +23,7 @@ public struct MarvelCharacter: Codable, Hashable {
 		return path + "." + ext
 	}
 
-	public init(name: String, id: Int, description: String, thumbnail: MarvelCharacterThumbnail) {
+	public init(name: String, id: ID, description: String, thumbnail: MarvelCharacterThumbnail) {
 		self.name = name
 		self.id = id
 		self.description = description

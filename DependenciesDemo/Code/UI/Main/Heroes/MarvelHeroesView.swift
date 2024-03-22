@@ -27,7 +27,7 @@ struct MarvelHeroesView: View {
 		.environmentObject(marvelHeroesNavigation)
 		.task {
 			viewModel.setup(navigation: marvelHeroesNavigation)
-			await viewModel.loadData()
+			await viewModel.loadServiceData()
 		}
 	}
 

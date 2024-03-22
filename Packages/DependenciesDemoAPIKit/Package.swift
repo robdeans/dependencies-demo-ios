@@ -56,6 +56,6 @@ let package = Package(
 				"DependenciesDemoServices",
 			],
 			path: "./Config"
-		)
+		),
 	]
 )

@@ -7,9 +7,9 @@
 //
 
 import Dependencies
-import Foundation
 import DependenciesDemoHelpers
 import DependenciesDemoModels
+import Foundation
 
 final class APIClientLive: APIClient {
 	@Dependency(\.apiKitEnvironment.environment) var environment
@@ -22,7 +22,6 @@ final class APIClientLive: APIClient {
 				throw APIError.noInternetConnection
 			}
 			let urlRequest = try request.makeRequest(using: environment().baseURL)
-			// TODO: add shared headers if needed
 			let (data, response) = try await URLSession.shared.data(for: urlRequest)
 			try response.validate(with: data)
 			return try request.decoder.decode(Response.self, from: data)

@@ -18,7 +18,6 @@ final class MarvelHeroDetailsViewModel: ObservableObject {
 	}
 
 	init(id: Int) {
-		// TODO: initialize with API call from id
 		character = .example
 	}
 
